@@ -5,7 +5,7 @@ module.exports = {
         return res.json(user);
     },
     async list(req, res){
-        const user = await user.findOne({email: req.params.email});
+        const user = await User.findOne({email: req.params.email});
         return res.json(user);
     }
 };
